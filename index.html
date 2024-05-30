@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Nome Aba-->
+    <title>Sua lista de Tarefas</title>
+    <!--Ícone Aba-->
+    <link rel="shortcut icon" href="./imagens/logo_icon_site.png" type="image/x-icon" />
+    <!--link css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="main.css">
+    <!--link Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--título cabeçalho-->
+    <header>
+        <img src="./imagens/logo_icon_site.png" alt="imagem logo" />
+        <h1>SUA TO-DO LIST</h1>
+    </header>
+    <!--Sessão incluir tarefas-->
+    <section id="inclusao">
+        <div class="container">
+            <div id="nova_tarefa">
+                <div id="adicionar-tarefa-titulo">
+                    <img src="./imagens/adicionar_tarefa_icon.png" alt="Nova tarefa" />
+                    <h2>Adicionar Tarefa</h2>
+                </div>
+                <form id="inclusao-tarefa">
+                    <ul>
+                        <li>
+                            <label for="nome-tarefa">Qual é a tarefa?</label>
+                            <input type="text" id="nome-tarefa" maxlength="60" required />
+                        </li>
+                        <li>
+                            <label for="inicio-tarefa">Início:</label>
+                            <input type="date" id="inicio-tarefa" required/>
+                            <label for="fim-tarefa">Fim:</label>
+                            <input type="date" id="fim-tarefa" required />
+                        </li>
+                        <li>
+                            <textarea id="detalhes-tarefa" placeholder="Detalhes da tarefa (opcional)" rows="2"></textarea>
+                        </li>
+                        <li id="botoes-qtdTarefas">
+                            <div>
+                                <button type="button" type="submit" id="btn-salvar">Salvar</button>
+                                <button type="reset" id="btn-limpar">Limpar</button>
+                            </div>
+                            <div id="qtdTarefas">
+                                <span>Você tem <b>0</b> tarefas.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--Sessão suas tarefas-->
+    <section id="acompanhando">
+        <div id="lista-tarefa-titulo">
+            <img src="./imagens/a_fazer_icon.png" alt="Ícone Tarefa a fazer" />
+            <h3>Estas são suas Tarefas a Fazer</h3>
+        </div>
+        <div id="lista-tarefas">
+        </div>
+    </section>
+    <!--rodapé-->
+    <footer>
+        <p>&copy; Desenvolvido por André Soares para curso desenvolvedor EBAC - 2024</p>
+    </footer>
+    <!--bibliotécas e link JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
